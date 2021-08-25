@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SDK Example</title>
+  <link rel="stylesheet" href="style-ai.css">
+
+  <!-- STYLEAI -->
+  <script src="/bundles/style-ai.js"></script>
+  <script>
+    STYLEAI.init({
+      apiKey: 'd99993769daa4462a377934debb023cc7de6642e35a549989f2e4684507a5405',
+      productId: 1234,
+      showBrand: true,
+      externalLogData: { userId: '쇼핑몰 userId', age: '10-20' },
+    })
+  </script>
+  <!-- /STYLEAI -->
+
+</head>
+<body>
+
+<div class="limited-width">
+  <div class="banner" style='background-image: url("//placehold.it/2000x400/55dddd/ffffff?text=Example Banner")'></div>
+  <h2>렌더 타입</h2>
+
+  <!-- STYLEAI -->
+  <div data-style-ai-render="recommend" id="my_recommends2"></div>
+  <!-- /STYLEAI -->
+
+</div>
+<div class="banner" style='background-image: url("//placehold.it/2000x200/55aadd/ffffff?text=Full Size Banner")'></div>
+
+<!-- STYLEAI -->
+<div data-style-ai-render="recommend"
+     data-style-ai-device-sizes="700,1200"></div>
+<!-- /STYLEAI -->
+
+<div class="banner" style='background-image: url("//placehold.it/2000x200/ffaa99/ffffff?text=Full Size Banner")'></div>
+
+<div class="limited-width">
+  <h2>오버레이 타입</h2>
+
+  <!-- STYLEAI -->
+  <button class="show-recommends" data-style-ai-open-layer="recommend" id="my_recommends1">추천상품 보기</button>
+  <!-- /STYLEAI -->
+
+  <br/>
+  <img src="//placehold.it/1000x800/eeccdd/ffffff?text=Product Image"/>
+  <br/>
+</div>
+
+<div class="banner" style='background-image: url("//placehold.it/2000x200/ffaa99/ffffff?text=Full Size Banner")'></div>
+
+<div class="limited-width">
+  <h2>렌더 타입 (커스텀 템플릿)</h2>
+
+  <!-- STYLEAI -->
+  <div data-style-ai-render="recommend" data-style-ai-template="my-render-template-1"></div>
+  <!-- /STYLEAI -->
+
+</div>
+
+<div class="banner" style='background-image: url("//placehold.it/2000x200/ffaa99/ffffff?text=Full Size Banner")'></div>
+
+<div class="limited-width">
+  <h2>오버레이 타입 (커스텀 템플릿)</h2>
+  <img src="//placehold.it/1000x800/eeccdd/ffffff?text=Product Image"/>
+
+  <!-- STYLEAI -->
+  <button class="show-recommends"
+          data-style-ai-open-layer="recommend"
+          data-style-ai-template="my-render-template-1">
+    추천상품 보기
+  </button>
+  <!-- /STYLEAI -->
+
+</div>
+
+<!-- STYLEAI -->
+<script type='template' id="my-render-template-1">
+  
+  <div class="custom-template-container">
+    <% recommends.forEach(function(recommend){ %>
+    <div class="custom-template-style">
+      <div class="custom-template-style-name"><%= recommend.styleName %></div>
+      <img class="custom-template-style-image" src="<%= recommend.styleOutImageUrl %>" alt="">
+
+      <ul class="custom-template-recommend-list">
+        <% recommend.recommendItems.forEach(function(recommendItem){ %>
+        <li>
+          <a href="<%= recommendItem.detailUrl %>" target="_blank">
+            <img class="custom-template-recommend-image" src="<%= recommendItem.imageUrl %>" alt="">
+            <div class="custom-template-recommend-name"><%= recommendItem.name %></div>
+            <div class="custom-template-recommend-price"><%= recommendItem.price %>원</div>
+          </a>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
+    <% }) %>
+  </div>
+  
+</script>
+<!-- /STYLEAI -->
+
+</body>
+</html>

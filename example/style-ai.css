@@ -1,0 +1,96 @@
+body {
+    margin: 0
+}
+
+.banner {
+    background-image: url('//placehold.it/1000x200/ffdd77/ffffff?text=Style.ai');
+    background-size: cover;
+    background-position: center;
+    height: 200px
+}
+
+.limited-width {
+    max-width: 1140px;
+    margin: 0 auto
+}
+
+.limited-width > img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto
+}
+
+.show-recommends {
+    cursor: pointer;
+    border: solid 1px #bbb;
+    background: #eee;
+    padding: 10px;
+    margin: 10px 10px 10px 0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px 0px;
+    border-radius: 4px
+}
+
+.custom-template-container {
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.custom-template-style {
+    padding: .5em;
+    margin:  .5em;
+    border: solid 1px #777;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.custom-template-style-name {
+    font-weight: bold;
+}
+
+.custom-template-style-image {
+    float: left;
+    height: 300px;
+    width: auto;
+    border: solid 1px #777;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.custom-template-recommend-list {
+    overflow: hidden;
+    margin: 0;
+}
+
+.custom-template-recommend-list > li {
+    overflow: hidden;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.custom-template-recommend-list > li:hover {
+    background: #eee;
+}
+
+.custom-template-recommend-list > li a {
+    color: #666;
+    text-decoration: none;
+}
+
+.custom-template-recommend-image {
+    float: left;
+    height: 90px;
+    width: auto;
+    border: solid 1px #777;
+    border-radius: 5px;
+    margin-right: 1em;
+    box-sizing: border-box;
+}
+
+.custom-template-recommend-name {
+    font-weight: bold;
+}
+
+.custom-template-recommend-price {
+
+}

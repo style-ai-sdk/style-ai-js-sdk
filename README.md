@@ -42,7 +42,7 @@ javascript 파일을 다운로드 받아 초기화하기 위해서 HTML 문서�
   본사에서 지원하는 특정 쇼핑몰의 경우, `style-ai.js`가 아닌 다른 파일 주소로 안내 받으셨을 수 있습니다. 이런 경우, `productId` 값을 생략하시고 다음과 같이 간단하게 초기화 할 수
   있습니다.
   ```html
-  <script src="https:////style-ai-sdk.github.io/style-ai-js-sdk/<쇼핑몰별 제공파일>.js"></script>
+  <script src="https://style-ai-sdk.github.io/style-ai-js-sdk/<쇼핑몰별 제공파일>.js"></script>
   <script>STYLEAI.init({ apiKey: "<apiKey>" })</script>
   ```
 - __`head` 태그 안에서는 `productId` 값을 넣을 수가 없어요 :__  
@@ -111,7 +111,7 @@ HTML `body`내에 상품 추천을 노출하고 싶은 부분에 다음과 같�
 ```html
 <head>
   ...
-  <script src="https:////style-ai-sdk.github.io/style-ai-js-sdk/style-ai.js"></script>
+  <script src="https://style-ai-sdk.github.io/style-ai-js-sdk/style-ai.js"></script>
   <script>
     STYLEAI.init({
       apiUrl: '{호출할 API URL}',
